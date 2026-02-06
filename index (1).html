@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Support Bot Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hero-section">
+        <h1 class="hero-text">Support Bot Interface</h1>
+        <p class="hero-subtext">Clean. Movable. Professional.</p>
+    </div>
+
+    <div class="widget-wrapper" id="widget">
+        <div class="fab-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </div>
+
+        <div class="chat-content">
+            <div class="chat-header" id="dragHandle">
+                <div class="status-container">
+                    <div class="pulse-dot"></div>
+                    <strong>Support Assistant</strong>
+                </div>
+                <span id="closeBtn" style="cursor:pointer; padding: 5px;">✕</span>
+            </div>
+            
+            <div id="chat-box">
+                <div class="msg bot">
+                    Hello! I've added a Send button so you can easily message me on mobile. How can I help?
+                    <div class="btn-group">
+                        <button class="action-btn" onclick="quickMsg('Pricing')">Pricing</button>
+                        <button class="action-btn" onclick="quickMsg('Services')">Services</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing" id="typingIndicator">Assistant is typing...</div>
+
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Type here..." autocomplete="off">
+                <button class="send-btn" id="sendButton">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
